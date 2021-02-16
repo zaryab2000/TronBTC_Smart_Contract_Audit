@@ -1,0 +1,77 @@
+
+/*
+-----------------------------------------------------------------------
+Contract summary - TronBTC.app - A cross-chain defi solutions provider
+----------------------------------------------------------------------- 
+Invest in Tron and profits in BTC / ETH / BNB by using cross-chain defi products, by monetizing the BTC/ETH/BNB growth patterns.
+This contract is the first building block to build the cross-chain ecosystem.
+BinanceBTC.app, HuobiBTC.app, MonetizeApp, CrossSwap, TronSwap, EthSwap, BnbSap will be followed very soon. Infact, EthSwap, BnbSwap, TronSwap(test) are functional and live on the site.
+Then, a cross-chain exchange product CrossSwap will be delivered to complete the ecosystem build.
+One coin per chain is used. TBXC for Tron, BBXC for BSC & HBXC for Huobi blockchain.
+Once the ecosystem is complete, there will be an amazing set of use-cases to work through and the sky is the limit. 
+-----------------------------------------------------------------------
+TronBTC - How It Works?
+TronBTC is the first building block for the cross-chain ecosystem, to create a value for TBXC utility coin by utilizing the staking and referral model.
+Please note the BTC part is not yet included, BTC interaction comes into the picture at a later product called MonetizeApp, once the ecosystem is built. (After all 3 chains building blocks are ready)
+TBXC is a zero pre-mine coin and is owned by this contract. Nobody has any special privileges ie nobody can mint or burn the coin.
+While deploying the token contract, it grants 10 coins only to list in justswap.
+-----------------------------------------------------------------------
+How does this contract work?
+
+- Initial growth until 2 mil trx invested.
+- 1-2% daily until Initial growth period is over, then 2% daily until 100% principal is recovered, 1% until 300% is achieved
+- Referrals: 4 levels with 5%, 3%, 1% & 1%
+- Every TRX deposit/reinvests results in token issuance (For reinvest, it is only after the growth period is over)
+
+- UserTypes: 3 User types to cater to different needs of users
+	- Basic User: (userType=1)
+		No risk category
+		90% tokens burn by ststem
+		Best category for passive investment w/o any risks or concerns
+		Withdrawal always goes through as 90% token burn rate is maintained
+	- Medium User: (userType=1)
+		Medium risk category
+		Investor can make better profit compare to basic users or can lose some compare to basic users
+		Medium risk/Medium loss/Medium profit category
+		80% token burn automatically
+		Withdraw requires 90% SystemTokenBurnRate a.k.a STBR when deposit made and goes down by 1% per day
+		Every deposit/withdraw/reinvest resets STBR to 90%
+		Only suitable for knowledgable traders at justswap or dexes in general		 
+	- Advanced User: (userType=2)
+		High risk/ high profit category
+		May make lot of profit or may lose all the money
+		High caution is suggested
+		Only for trading experts at dexes
+		Not suggested for regular users
+		All tokens avaialable, no burn
+		Withdraw requires 90% SystemTokenBurnRate a.k.a STBR when deposit made and goes down by 1% per day
+		Every deposit/withdraw/reinvest resets STBR to 90%
+		Withdraws will be delayed until 90% token burn met	
+		
+Tokenomics:
+	TronBTC rewards more to initial backers of the project and token issuance is a bit liberal until 2mil trx is invested.
+	After that, the token issuance rate will be very low, compared to the initial growth period.
+	
+Circular effect/price actions:
+	Every withdrawal donates 25% to buy the token at market price. But the project may get hit badly if whales try to pump the price and let the contract buy the tokens at a high price. NMP_DONATED_PURCHASE_PERCENT parameter is used to control the percent of tokens purchase at dexes. 
+	Every new deposit has a scope to get some of the trx donated from withdrawals. It is completely randomized. If the user's new deposit is the big one in the last so and so time (this is completely randomized by blockchain timestamp), that user gets the gift. Otherwise, the market buy happens w/o gift.
+	Every withdrawal improves the coin buy, due to coin purchase at dex.
+	Coin price increase automatically improves deposits (That is the only way to get free tokens)
+	The contract always makes sure that token price at dex is in line with the token issue rate
+	If somebody dumps the price, they very much know that their capital will be locked at a contract because of a 90% token burn requirement.
+	Overall, this is a highly sustainable model, to strike a balance between deposits, withdrawals, coin prices at dex.
+	Deposits, withdrawals, Coin price at dex - These 3 go hand in hand. One item increase or decreases, the contract helps to bring the balance.
+	-> More deposits, dump the coin price at dex. Withdrawals help increase the price
+	-> More withdraws, increase the coin price, in turn, increase the deposits
+	-> High coin price at dex - increase the deposits
+	-> Dump at dex - users burn the tokens they have and go for more withdrawals, which helps increase the price again	
+-----------------------------------------------------------------------
+*/
+
+
+Links to PDFs
+https://tronbtc.app/Project_Overview.pdf
+https://tronbtc.app/TronBTC_Overview.pdf
+https://tronbtc.app/TronBTC_Tokenomics_And_PricingModel.pdf
+
+
